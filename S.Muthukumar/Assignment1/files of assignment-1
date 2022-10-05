@@ -1,7 +1,5 @@
 <html lang="en">
 
-
-
 <head>
 
 <meta charset="UTF-8">
@@ -13,8 +11,6 @@ content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="resume.css">
 
 </head>
-
-
 
 <body>
 
@@ -36,19 +32,7 @@ style="width:100px;height:100px;">
 
 <h2>Contact</h2>
  
-
 <p><b>Email id:</b>muthuchinna7401@gmail.com</p>
-
-
-
-
-
-
-
-
-
-
-
 
 <p><b>Mobile no :</b>9344167417</p>
 
@@ -113,28 +97,12 @@ JavaScript, React</b></li>
 </div>
 
 <div class="title">
-
-
-
-
-
 <p>Frontend Developer</p>
-
-
-
-
-
-
-
 </div>
 
 <div class="Summary">
 
 <h2>Summary</h2>
-
-
-
-
 
 <p>To secure a challenging position in a
 
@@ -143,12 +111,6 @@ reputable organization
 to expand my learning knowledge and skill
 
 </p>
-
-
-
-
-
-
 
 </div> 
 
@@ -202,19 +164,9 @@ to expand my learning knowledge and skill
 
 <h2>Project1</h2>
 
-
-
-
-
 <p>This project is based on html
 
 & used React</p>
-
-
-
-
-
-
 
 </li>
 
@@ -222,21 +174,10 @@ to expand my learning knowledge and skill
 
 <h2>Project2</h2>
 
-
-
-
-
 <p>This project is based on html
 
 & used React</p>
  
-
-
-
-
-
-
-
 </li>
 
 </ul>
@@ -294,8 +235,6 @@ position: initial; background-color: rgb(126,
 
 219, 231); padding: 20px;
 
-
-
 }
 
 .right {
@@ -303,8 +242,6 @@ position: initial; background-color: rgb(126,
 position: initial;
 
 background-color: rgb(162, 202, 206);  padding: 20px;
-
-
 
 }
 
