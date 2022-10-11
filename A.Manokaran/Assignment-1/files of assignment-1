@@ -1,1 +1,259 @@
+<html lang="en">
 
+<head>
+
+<meta charset="UTF-8">
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge"> <meta name="viewport"
+
+content="width=device-width, initial-scale=1.0">
+
+<link rel="stylesheet" href="resume.css">
+
+</head>
+
+<body>
+
+<div class="full">
+
+<div class="left">
+
+<div class="image">
+
+<img src="iconimg.jpg"
+
+alt="logo"
+
+style="width:100px;height:100px;">
+
+</div>
+
+<div class="Contact">
+
+<h2>Contact</h2>
+ 
+<p><b>Email id:</b>mano2001@gmail.com</p>
+
+<p><b>Mobile no :</b>9360142391</p>
+
+
+</div>
+
+<div class="Skills">
+
+<h2>Skills</h2>
+
+<ul>
+
+<li><b>Programming Languages :
+
+Java,Python,</b></li>
+
+<li><b>Frontend : JavaScript, React</b></li>
+
+</ul>
+
+</div>
+
+<div class="Language">
+
+<h2>Language</h2>
+
+<ul>
+
+<li>English</li>
+
+<li>tamil</li>
+
+</ul>
+
+</div>
+
+<div class="Hobbies">
+
+<h2>Hobbies</h2>
+
+<ul>
+ 
+<li>Playing Games</li>
+
+<li>Treking</li>
+
+<li>Binge Watch</li>
+
+</ul>
+
+</div>
+
+</div>
+
+<div class="right">
+
+<div class="name">
+
+<h1>Muthukumar</h1>
+
+</div>
+
+<div class="title">
+<p>Frontend Developer</p>
+</div>
+
+<div class="Summary">
+
+<h2>Summary</h2>
+
+<p>To secure a challenging position in a
+
+reputable organization
+
+to expand my learning knowledge and skill
+
+</p>
+
+</div> 
+
+
+<div class="Education">
+
+<h2>Education</h2>
+
+<table>
+
+<tr>
+
+<th>University/college </th>
+
+<th>passing year </th>
+
+<th>percentage/cgpa</th>
+
+</tr>
+
+<tr>
+ 
+
+<td>PSNA college of engineering&Technology</td>
+
+<td>pursuing</td>
+
+<td>7.80</td>
+
+</tr>
+
+<tr>
+
+<td>SBOA matriculation</td>
+
+<td>2019</td>
+
+<td>70%</td>
+
+</tr>
+
+</table>
+
+</div>
+
+<div class="project">
+
+<ul>
+
+<li>
+
+<h2>Project1</h2>
+
+<p>This project is based on html
+
+& used React</p>
+
+</li>
+
+<li>
+
+<h2>Project2</h2>
+
+<p>This project is based on html
+
+& used React</p>
+ 
+</li>
+
+</ul>
+
+</div>
+
+</div>
+
+</div>
+
+</body>
+
+</html>
+
+CSS
+
+/* Write CSS Here */
+
+* {
+
+margin: 0; padding: 0;
+
+box-sizing: border-box;
+
+}
+
+body {  background-color: rgb(154, 155, 156);
+
+display:	flex;	justify-content:	center;
+
+alignitems: center;
+
+}
+
+.full {
+
+width: 50%;	max-
+
+width: 1000px;  min-height: 100px;
+
+background-color: rgb(100, 50, 200);
+
+margin: 0px;	display: grid;	grid-
+
+template-
+
+columns: 2fr 4fr;
+
+}
+
+.left {
+ 
+
+position: initial; background-color: rgb(126,
+
+219, 231); padding: 20px;
+
+}
+
+.right {
+
+position: initial;
+
+background-color: rgb(162, 202, 206);  padding: 20px;
+
+}
+
+.image, .Contact, .Skills, .Language, .Hobbies, .title,
+
+.Summary, .Experience, .Education, .project {
+
+margin-bottom: 30px;
+
+} .h2
+
+{
+
+background-color: rgb(4, 96, 150);
+
+}
