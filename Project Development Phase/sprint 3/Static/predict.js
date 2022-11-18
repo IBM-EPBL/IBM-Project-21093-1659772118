@@ -1,23 +1,41 @@
-const inputs = document.querySelectorAll(".input");
+var myClarifaiApiKey = os.environ['CLARIFAI_API_KEY'];
+var myWolframAppId = 'UQQPTV-638AR3Y8VE';
 
-function focusFunc() {
-  let parent = this.parentNode;
-  parent.classList.add("focus");
+var app = new Clarifai.App({apiKey: myClarifaiApiKey});
+
+function predict_click(value, source) {
+  var preview = $(".food-photo");
+  var file    = document.querySelector("input[type=file]").files[0];
+  var loader  = "https://s3.amazonaws.com/static.mlh.io/icons/loading.svg";
+  var reader  = new FileReader();
+
+  // load local file picture
+  reader.addEventListener("load", function () {
+    preview.attr('style', 'background-image: url("' + reader.result + '");');
+    doPredict({ base64: reader.result.split("base64,")[1] });
+  }, false);
+
+  if (file) {
+    reader.readAsDataURL(file);
+    $('#concepts').html('<img src="' + loader + '" class="loading" />');
+  } else { alert("No file selcted!"); }
 }
 
-function blurFunc() {
-  let parent = this.parentNode;
-  if (this.value == "") {
-    parent.classList.remove("focus");
-  }
-}
+/*
+  Purpose: Does a v2 prediction based on user input
+  Args:
+    value - Either {url : urlValue} or { base64 : base64Value }
+*/
+function doPredict(value) {
+  app.models.predict(Clarifai.FOOD_MODEL, value).then(function(response) {
+      if(response.rawData.outputs[0].data.hasOwnProperty("concepts")) {
+        var tag = response.rawData.outputs[0].data.concepts[0].name;
+        var url = 'http://api.wolframalpha.com/v2/query?input='+tag+'%20nutrition%20facts&appid='+myWolframAppId;
 
-inputs.forEach((input) => {
-  input.addEventListener("focus", focusFunc);
-  input.addEventListener("blur", blurFunc);
-});
-//for send button notification
-var pressedButton = document.getElementsByClassName("btn")[0];
-   pressedButton.addEventListener("click", function (event) {
-      alert("Your Message is sent!..")
-   })
+        getNutritionalInfo(url, function (result) {
+          $('#concepts').html('<h3>'+ tag + '</h3>' + "<img src='"+result+"'>");
+        });
+      }
+    }, function(err) { console.log(err); }
+  );
+}
